@@ -1,0 +1,5 @@
+pacman -S ghostty
+curl o
+
+
+curl -fsSL https://raw.githubusercontent.com/radleylewis/nvim-lite/master/init.lua -o ~/.config/nvim/init.lua
