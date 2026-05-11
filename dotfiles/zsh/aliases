@@ -1,0 +1,24 @@
+alias home="cd ~"
+alias desk="cd ~/Desktop/"
+alias proj="cd ~/Desktop/github.com/FredDude2004/"
+alias scr="cd ~/Desktop/scratch/"
+alias mat="cd ~/Desktop/github.com/FredDude2004/MatEnsemble/"
+alias todo="cd ~/Documents/todo/"
+alias notes="cd ~/Documents/deez_notez/ && vim ."
+
+alias l="ls -lahF"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias glog="git log --all --decorate --oneline --graph"
+
+alias perlmutter-ornl="echo -J bstn-wks-gate.ornl.gov kaleb@perlmutter.nersc.gov"
+alias perlmutter="echo kaleb@perlmutter.nersc.gov"
+alias frontier="echo kaleb@frontier.olcf.ornl.gov"
+
+if command -v eza &> /dev/null; then
+  alias ls='eza -lh --group-directories-first --icons=auto'
+  alias lsa='ls -a'
+  alias lt='eza --tree --level=2 --long --icons --git'
+  alias lta='lt -a'
+fi

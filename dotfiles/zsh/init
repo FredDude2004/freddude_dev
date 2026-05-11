@@ -1,0 +1,3 @@
+eval "$(starship init zsh)"
+source <(fzf --zsh)
+. "$HOME/.local/bin/env"
