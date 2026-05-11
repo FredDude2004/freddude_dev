@@ -1,5 +1,4 @@
 pacman -S ghostty
-curl o
+mkdir -p ~/.config/ghostty/
 
-
-curl -fsSL https://raw.githubusercontent.com/radleylewis/nvim-lite/master/init.lua -o ~/.config/nvim/init.lua
+curl -fsSL https://raw.githubusercontent.com/FredDude2004/freddude_dev/main/dotfiles/ghostty/config.ghostty -o ~/.config/ghostty/config.ghostty
