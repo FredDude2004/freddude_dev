@@ -1,4 +1,4 @@
-pacman -S ghostty
-mkdir -p ~/.config/ghostty/
+#!/usr/bin/env bash
 
-curl -fsSL https://raw.githubusercontent.com/FredDude2004/freddude_dev/main/dotfiles/ghostty/config.ghostty -o ~/.config/ghostty/config.ghostty
+sudo dnf copr enable scottames/ghostty
+sudo dnf install -y ghostty

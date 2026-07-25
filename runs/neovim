@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
 mkdir -p "$HOME/.local/src"
-
-sudo pacman -S --noconfirm base-devel cmake ninja curl git
-git clone -b v0.12.2 https://github.com/neovim/neovim.git "$HOME/.local/src/neovim"
-
+git clone -b v0.12.4 https://github.com/neovim/neovim.git "$HOME/.local/src/neovim"
+cd "$HOME/.local/src/neovim" || exit
 make CMAKE_BUILD_TYPE=Release
 sudo make install
 
-mkdir -p "$HOME/.config"
-git clone https://github.com/FredDude2004/nvim.git "$HOME/.config/nvim"
+

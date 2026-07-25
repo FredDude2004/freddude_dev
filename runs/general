@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# essential development tools
+sudo dnf group install "Development Tools"
+sudo dnf install -y \
+    gcc gcc-c++ clang llvm lldb cmake ninja-build \
+    meson make gdb valgrind pkgconf pkgconf-pkg-config \
+    openssl-devel zlib-devel xz-devel readline-devel \
+    sqlite-devel libffi-devel gettext curl glibc-gconv-extra
+
+# better core utils
+sudo dnf install -y \
+    zsh tmux fzf ripgrep fd-find bat eza zoxide jq yq \
+    tree htop btop ncdu unzip zip p7zip wget curl git-delta
+
+git config --global core.pager delta
+git config --global interactive.diffFilter "delta --color-only"
+
+# configure ssh
+sudo dnf install -y openssh
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
+
+# python tools
+sudo dnf install -y \
+    python3 python3-pip python3-virtualenv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# golang tools
+sudo dnf install -y golang
+
+# rust tools
+curl https://sh.rustup.rs -sSf | sh
+
+# networking tools
+sudo dnf install -y \
+    nmap net-tools bind-utils tcpdump traceroute
+
+# setting up my personal repos and files
+mkdir -p ~/Desktop/github.com/FredDude2004/
+

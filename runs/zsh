@@ -1,3 +1,4 @@
-sudo pacman -S zsh
-chsh -s $(which zsh)
-TODO fix this later
+#!/usr/bin/env bash
+
+sudo dnf install -y zsh
+sudo usermod --shell /bin/zsh $USER
