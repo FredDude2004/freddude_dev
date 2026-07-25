@@ -5,6 +5,7 @@ alias scr="cd ~/Desktop/scratch/"
 alias mat="cd ~/Desktop/github.com/FredDude2004/MatEnsemble/"
 alias todo="cd ~/Documents/todo/"
 alias notes="cd ~/Documents/deez_notez/ && vim ."
+alias dotfiles="cd ~/Desktop/github.com/FredDude2004/freddude_dev/dotfiles/"
 
 alias l="ls -lahF"
 alias v="nvim"

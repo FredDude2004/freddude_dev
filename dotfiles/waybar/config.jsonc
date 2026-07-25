@@ -1,0 +1,88 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 0,
+
+  "modules-left": [
+    "sway/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "bluetooth",
+    "network",
+    "battery",
+    "custom/power"
+  ],
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}",
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%A %B %e %I:%M %p}",
+    "tooltip": false
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-connected": "",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-no-controller": "",
+    "tooltip-format": "Bluetooth: {status}",
+    "tooltip-format-connected": "{controller_alias}\n{num_connections} connected",
+    "on-click": "blueman-manager"
+  },
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
+    "format-linked": "󰈀",
+    "format-disconnected": "",
+    "format-disabled": "",
+    "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%",
+    "tooltip-format-ethernet": "Ethernet: {ifname}\n{ipaddr}/{cidr}",
+    "tooltip-format-linked": "{ifname}: linked, no IP address",
+    "tooltip-format-disconnected": "Network disconnected",
+    "tooltip-format-disabled": "Wi-Fi disabled",
+    "on-click": "nm-connection-editor"
+  },
+
+  "battery": {
+    "interval": 30,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-full": "",
+    "format-charging": "",
+    "format-plugged": "",
+    "format-icons": ["", "", "", "", ""],
+    "format-time": "{H}h {m}m",
+    "tooltip": true,
+    "tooltip-format": "Battery: {capacity}%\nEstimated time: {time}"
+  },
+
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wlogout"
+  }
+}

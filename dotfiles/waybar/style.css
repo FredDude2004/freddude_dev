@@ -1,0 +1,116 @@
+/* Gruber Darker-inspired, mostly monochrome Waybar palette */
+@define-color background #181818;
+@define-color surface #282828;
+@define-color foreground #e4e4ef;
+@define-color muted #777777;
+@define-color critical #c73c3f;
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "CaskaydiaMono Nerd Font", "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+}
+
+window#waybar {
+  background: @background;
+  color: @foreground;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+/* Compact 22px workspace squares inside the 30px bar. */
+#workspaces button {
+  min-width: 22px;
+  padding: 0;
+  margin: 4px 2px;
+  border-radius: 4px;
+  background: transparent;
+  color: @muted;
+  box-shadow: none;
+}
+
+#workspaces button:hover {
+  background: @surface;
+  color: @foreground;
+  box-shadow: none;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background: @foreground;
+  color: @background;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  background: @critical;
+  color: @foreground;
+}
+
+#clock {
+  color: @foreground;
+  font-weight: bold;
+}
+
+#bluetooth,
+#network,
+#battery {
+  min-width: 18px;
+  padding: 0 7px;
+  margin: 4px 1px;
+  border-radius: 4px;
+  background: transparent;
+  color: @foreground;
+}
+
+#bluetooth:hover,
+#network:hover,
+#battery:hover {
+  background: @surface;
+}
+
+#bluetooth.disabled,
+#bluetooth.off,
+#network.disconnected,
+#network.disabled {
+  color: @muted;
+}
+
+#battery.warning {
+  color: @muted;
+}
+
+#battery.critical:not(.charging) {
+  color: @critical;
+}
+
+tooltip {
+  background: @surface;
+  color: @foreground;
+  border: 1px solid @muted;
+  border-radius: 4px;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
+#custom-power {
+  color: @foreground;
+  min-width: 18px;
+  padding: 0 8px;
+  margin: 4px 1px;
+  border-radius: 4px;
+}
+
+#custom-power:hover {
+  background: @surface;
+}
